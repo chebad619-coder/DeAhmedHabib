@@ -86,7 +86,7 @@ const PrescriptionServicesForm: React.FC = () => {
               name="medicationName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Medication Name</Formलोकन>
+                  <FormLabel>Medication Name</FormLabel>
                   <FormControl>
                     <Input placeholder="Amoxicillin" {...field} />
                   </FormControl>
