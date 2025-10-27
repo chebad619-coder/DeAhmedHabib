@@ -22,12 +22,12 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" }, // Updated link to /dashboard
   { to: "/patient-management", icon: Users, label: "Patient Management" },
   { to: "/examination", icon: Stethoscope, label: "Examination" },
   { to: "/investigations", icon: FlaskConical, label: "Investigations" },
   { to: "/prescription-services", icon: Pill, label: "Prescription & Services" },
-  { to: "/referral-followup", icon: FileText, label: "Referral & Follow-up" }, // Updated link
+  { to: "/referral-followup", icon: FileText, label: "Referral & Follow-up" },
   { to: "/library", icon: Book, label: "Library" },
   { to: "/reports", icon: DollarSign, label: "Financial & Statistics" },
   { to: "/settings", icon: Settings, label: "Settings" },

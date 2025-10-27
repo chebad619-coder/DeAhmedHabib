@@ -3,12 +3,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import IndexPage from "./pages/Index"; // New import for the main index page
 import DashboardPage from "./pages/DashboardPage";
 import PatientManagementPage from "./pages/PatientManagementPage";
 import ExaminationPage from "./pages/ExaminationPage";
 import InvestigationsPage from "./pages/InvestigationsPage";
 import PrescriptionServicesPage from "./pages/PrescriptionServicesPage";
-import ReferralFollowupPage from "./pages/ReferralFollowupPage"; // New import
+import ReferralFollowupPage from "./pages/ReferralFollowupPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,12 +21,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/" element={<IndexPage />} /> {/* Set IndexPage as the root */}
+          <Route path="/dashboard" element={<DashboardPage />} /> {/* Dashboard now at /dashboard */}
           <Route path="/patient-management" element={<PatientManagementPage />} />
           <Route path="/examination" element={<ExaminationPage />} />
           <Route path="/investigations" element={<InvestigationsPage />} />
           <Route path="/prescription-services" element={<PrescriptionServicesPage />} />
-          <Route path="/referral-followup" element={<ReferralFollowupPage />} /> {/* New route */}
+          <Route path="/referral-followup" element={<ReferralFollowupPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
