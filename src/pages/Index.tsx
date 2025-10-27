@@ -1,20 +1,19 @@
-import React from "react";
-import MainLayout from "@/components/MainLayout";
+// Update this page (the content is just a fallback if you fail to update the page)
 
-const IndexPage: React.FC = () => {
+import { MadeWithDyad } from "@/components/made-with-dyad";
+
+const Index = () => {
   return (
-    <MainLayout>
-      <div className="flex flex-col items-center justify-center p-6 text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Habib Pediatric Smart Clinic System!</h1>
-        <p className="text-lg text-gray-700">
-          Your comprehensive solution for patient management.
-        </p>
-        <p className="text-md text-gray-500 mt-2">
-          Use the sidebar to navigate through the system modules.
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
+        <p className="text-xl text-gray-600">
+          Start building your amazing project here!
         </p>
       </div>
-    </MainLayout>
+      <MadeWithDyad />
+    </div>
   );
 };
 
-export default IndexPage;
+export default Index;
