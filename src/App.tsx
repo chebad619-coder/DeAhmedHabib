@@ -7,7 +7,8 @@ import DashboardPage from "./pages/DashboardPage";
 import PatientManagementPage from "./pages/PatientManagementPage";
 import ExaminationPage from "./pages/ExaminationPage";
 import InvestigationsPage from "./pages/InvestigationsPage";
-import PrescriptionServicesPage from "./pages/PrescriptionServicesPage"; // New import
+import PrescriptionServicesPage from "./pages/PrescriptionServicesPage";
+import ReferralFollowupPage from "./pages/ReferralFollowupPage"; // New import
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,7 +24,8 @@ const App = () => (
           <Route path="/patient-management" element={<PatientManagementPage />} />
           <Route path="/examination" element={<ExaminationPage />} />
           <Route path="/investigations" element={<InvestigationsPage />} />
-          <Route path="/prescription-services" element={<PrescriptionServicesPage />} /> {/* New route */}
+          <Route path="/prescription-services" element={<PrescriptionServicesPage />} />
+          <Route path="/referral-followup" element={<ReferralFollowupPage />} /> {/* New route */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
